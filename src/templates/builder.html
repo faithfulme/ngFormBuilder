@@ -1,6 +1,6 @@
 <div class="row formbuilder">
   <div class="col-xs-4 col-sm-3 col-md-2 formcomponents" ng-if="form && form.display">
-    <uib-accordion close-others="true" ng-if="form.display !== 'pdf'">
+    <uib-accordion close-others="true" ng-if="form.display !== 'pdf'" style="position: fixed; top: 100px;">
       <div uib-accordion-group ng-repeat="(groupName, group) in formComponentGroups" heading="{{ group.title | formioTranslate }}" is-open="$first" class="panel panel-default form-builder-panel {{ group.panelClass }}">
         <uib-accordion close-others="true" ng-if="group.subgroups">
           <div uib-accordion-group ng-repeat="(subgroupName, subgroup) in group.subgroups" heading="{{ subgroup.title | formioTranslate }}" is-open="$first" class="panel panel-default form-builder-panel subgroup-accordion">
